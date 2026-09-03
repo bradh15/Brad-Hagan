@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brad's Homepage</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            color: white;
+            background: linear-gradient(135deg, #111827, #7c0923);
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 8%;
+        }
+
+        .logo {
+            color: #f1be48;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        nav a {
+            margin-left: 25px;
+            color: white;
+            text-decoration: none;
+        }
+
+        nav a:hover {
+            color: #f1be48;
+        }
+
+        .home {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            padding: 60px 8%;
+        }
+
+        .home-content {
+            max-width: 750px;
+        }
+
+        .school {
+            margin-bottom: 15px;
+            color: #f1be48;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin-bottom: 25px;
+            font-size: clamp(50px, 8vw, 100px);
+            line-height: 1;
+        }
+
+        h1 span {
+            color: #f1be48;
+        }
+
+        .description {
+            max-width: 650px;
+            color: #e5e7eb;
+            font-size: 20px;
+            line-height: 1.7;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .interest {
+            padding: 10px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        footer {
+            padding: 25px 8%;
+            color: #cbd5e1;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                align-items: flex-start;
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav a {
+                margin: 0 18px 0 0;
+            }
+
+            .description {
+                font-size: 17px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">BRAD</div>
+
+        <div>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+        </div>
+    </nav>
+
+    <main class="home">
+        <div class="home-content">
+            <p class="school">Iowa State University Student</p>
+
+            <h1>Hi, I'm <span>Brad.</span></h1>
+
+            <p class="description">
+                I love playing tennis, watching sports, discovering great movies
+                and television shows, and listening to EDM music.
+            </p>
+
+            <div class="interests">
+                <span class="interest">🎾 Tennis</span>
+                <span class="interest">🏟️ Sports</span>
+                <span class="interest">🎬 Movies & TV</span>
+                <span class="interest">🎧 EDM</span>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 Brad Hagan</p>
+    </footer>
+</body>
+</html>
