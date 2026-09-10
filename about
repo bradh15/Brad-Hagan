@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brad Hagan | Projects</title>
+    <title>Brad Hagan | Contact</title>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
@@ -14,14 +14,16 @@
         nav a { color: #fff; text-decoration: none; transition: color 0.3s; font-weight: 500; }
         nav a:hover, nav a.active { color: #f1be48; }
 
-        section { max-width: 1100px; margin: 0 auto; padding: 7rem 1.5rem 4rem; min-height: 80vh; }
-        h1 { text-align: center; margin-bottom: 2rem; color: #1a1a1a; }
+        section { max-width: 600px; margin: 0 auto; padding: 7rem 1.5rem 4rem; min-height: 80vh; }
+        h1 { text-align: center; margin-bottom: 1rem; color: #1a1a1a; }
+        p { text-align: center; color: #666; margin-bottom: 2rem; }
 
-        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
-        .project-card { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.08); transition: transform 0.3s; border-left: 4px solid #f1be48; }
-        .project-card:hover { transform: translateY(-5px); }
-        .project-card h3 { margin-bottom: 0.5rem; color: #1a1a1a; }
-        .project-card p { color: #666; font-size: 0.95rem; }
+        form { background: #fff; padding: 2rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .form-group { margin-bottom: 1.2rem; }
+        label { display: block; margin-bottom: 0.5rem; font-weight: bold; }
+        input, textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 4px; font-size: 1rem; }
+        button { width: 100%; padding: 0.75rem; background-color: #c8102e; color: #fff; border: none; border-radius: 4px; font-size: 1rem; font-weight: bold; cursor: pointer; transition: background 0.3s; }
+        button:hover { background-color: #a00c24; }
 
         footer { text-align: center; padding: 2rem; background-color: #1a1a1a; color: #fff; margin-top: 2rem; }
     </style>
@@ -34,28 +36,31 @@
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="projects.html" class="active">Projects</a></li>
-                <li><a href="contact.html">Contact</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section>
-        <h1>Projects & Work</h1>
-        <div class="project-grid">
-            <div class="project-card">
-                <h3>Iowa State Coursework</h3>
-                <p>Highlights of academic assignments, software projects, and research papers completed at ISU.</p>
+        <h1>Get In Touch</h1>
+        <p>Feel free to reach out for collaborations, questions, or just to say hi!</p>
+
+        <form action="#" method="POST">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" required placeholder="Your Name">
             </div>
-            <div class="project-card">
-                <h3>Sports Analytics App</h3>
-                <p>A side project analyzing team performance stats, player efficiency ratings, and game outcomes.</p>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" required placeholder="your.email@example.com">
             </div>
-            <div class="project-card">
-                <h3>Music Playlist Curator</h3>
-                <p>A collection of curated EDM playlists, festival guides, and audio visualizer experiments.</p>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" rows="5" required placeholder="Your message here..."></textarea>
             </div>
-        </div>
+            <button type="submit">Send Message</button>
+        </form>
     </section>
 
     <footer>
