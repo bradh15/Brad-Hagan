@@ -3,49 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brad's Homepage</title>
-
+    <title>Brad Hagan | Portfolio</title>
     <style>
-        body {
+        /* Reset and basic setup */
+        * {
             margin: 0;
-            font-family: Arial, sans-serif;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
-        .navbar {
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header / Navbar */
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
             display: flex;
-            gap: 30px;
-            padding: 20px;
-            background-color: #c8102e;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
         }
 
-        .navbar a {
-            color: white;
-            font-weight: bold;
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 1.5rem;
+        }
+
+        nav a {
+            color: #fff;
             text-decoration: none;
+            transition: color 0.3s;
         }
 
-        .navbar a:hover {
-            color: #f1be48;
+        nav a:hover {
+            color: #c8102e; /* Iowa State Cardinal */
         }
 
-        .home {
-            padding: 60px;
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+            background: linear-gradient(135deg, #1a1a1a 0%, #c8102e 100%);
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #f1be48; /* Iowa State Gold */
+            color: #1a1a1a;
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: #1a1a1a;
+        }
+
+        /* Sections */
+        section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 5rem 1.5rem 2rem;
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #c8102e;
+            margin: 0.5rem auto 0;
+        }
+
+        /* About Grid Layout */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .about-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .about-card h3 {
+            margin-bottom: 0.5rem;
+            color: #c8102e;
+        }
+
+        /* Grid Layout for Projects */
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .project-card {
+            background: #fff;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-card h3 {
+            margin-bottom: 0.5rem;
+            color: #1a1a1a;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: #1a1a1a;
+            color: #fff;
+            margin-top: 3rem;
         }
     </style>
 </head>
-
 <body>
-    <div id="navigation"></div>
 
-    <main class="home">
-        <h1>Hi, I'm Brad</h1>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <div class="logo"><strong>Brad Hagan</strong></div>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <p>
-            I am a student at Iowa State University who loves playing tennis,
-            watching sports, movies and TV shows, and listening to EDM music.
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1>Hi, I'm Brad Hagan</h1>
+        <p>Iowa State University Student | Sports Enthusiast | EDM Fanatic</p>
+        <a href="#about" class="btn">Learn More About Me</a>
+    </div>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto; font-size: 1.1rem;">
+            Welcome to my personal site! My name is Brad Hagan. I am currently pursuing my education at Iowa State University. When I'm not studying, you can usually find me keeping up with sports or listening to electronic music.
         </p>
-    </main>
 
-    <script src="navigation.js"></script>
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>🎓 Iowa State University</h3>
+                <p>Currently studying as a Cyclone at Iowa State University, working towards my degree and building skills for the future.</p>
+            </div>
+            <div class="about-card">
+                <h3>⚽ Sports</h3>
+                <p>Huge passion for sports—whether it's following game stats, playing recreationally, or cheering on my favorite teams.</p>
+            </div>
+            <div class="about-card">
+                <h3>🎧 EDM Music</h3>
+                <p>Avid lover of Electronic Dance Music. Always on the lookout for new tracks, dynamic beats, and live music experiences.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects & Highlights</h2>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Academic Projects</h3>
+                <p>Details about coursework, class projects, or research done at Iowa State University.</p>
+            </div>
+            <div class="project-card">
+                <h3>Personal Interests</h3>
+                <p>Ideas, side projects, or sports analytics tools built in my free time.</p>
+            </div>
+            <div class="project-card">
+                <h3>Music & Playlists</h3>
+                <p>Favorite EDM mixes, festival recaps, or music curation projects.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Get In Touch</h2>
+        <p style="text-align: center;">
+            Feel free to reach out via email: <a href="mailto:brad.hagan@example.com" style="color: #c8102e; font-weight: bold;">brad.hagan@example.com</a>
+        </p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Brad Hagan. Built with HTML & CSS.</p>
+    </footer>
+
 </body>
 </html>
