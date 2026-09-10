@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brad Hagan | Projects</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { background-color: #f8f9fa; color: #333; line-height: 1.6; }
+        header { background-color: #1a1a1a; color: #fff; padding: 1rem 2rem; position: fixed; width: 100%; top: 0; z-index: 1000; }
+        nav { display: flex; justify-content: space-between; align-items: center; max-width: 1100px; margin: 0 auto; }
+        nav ul { display: flex; list-style: none; }
+        nav ul li { margin-left: 1.5rem; }
+        nav a { color: #fff; text-decoration: none; transition: color 0.3s; font-weight: 500; }
+        nav a:hover, nav a.active { color: #f1be48; }
+
+        section { max-width: 1100px; margin: 0 auto; padding: 7rem 1.5rem 4rem; min-height: 80vh; }
+        h1 { text-align: center; margin-bottom: 2rem; color: #1a1a1a; }
+
+        .project-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; }
+        .project-card { background: #fff; padding: 1.5rem; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.08); transition: transform 0.3s; border-left: 4px solid #f1be48; }
+        .project-card:hover { transform: translateY(-5px); }
+        .project-card h3 { margin-bottom: 0.5rem; color: #1a1a1a; }
+        .project-card p { color: #666; font-size: 0.95rem; }
+
+        footer { text-align: center; padding: 2rem; background-color: #1a1a1a; color: #fff; margin-top: 2rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html" style="color:#fff; text-decoration:none; font-size:1.2rem;"><strong>Brad Hagan</strong></a></div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section>
+        <h1>Projects & Work</h1>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Iowa State Coursework</h3>
+                <p>Highlights of academic assignments, software projects, and research papers completed at ISU.</p>
+            </div>
+            <div class="project-card">
+                <h3>Sports Analytics App</h3>
+                <p>A side project analyzing team performance stats, player efficiency ratings, and game outcomes.</p>
+            </div>
+            <div class="project-card">
+                <h3>Music Playlist Curator</h3>
+                <p>A collection of curated EDM playlists, festival guides, and audio visualizer experiments.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Brad Hagan. Built with HTML & CSS.</p>
+    </footer>
+
+</body>
+</html>
